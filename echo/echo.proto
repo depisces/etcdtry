@@ -1,0 +1,11 @@
+syntax = "proto3";
+package echo;
+option go_package="etcdtry/echo";
+
+message EchoMessage {
+    string mess=1;
+}
+
+service Echo {
+    rpc UnaryEcho (EchoMessage) returns (EchoMessage);
+}
